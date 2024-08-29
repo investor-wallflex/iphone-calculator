@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: content-box;
+            background-color: aqua;
+            padding: 0 5%;
+            
+           
+        }
+        .container{
+            background-color: black;
+            width: 350px;
+            padding: 25px;
+            border-radius: 10px;
+            
+                       
+        }
+        .cal_keys{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap:15px;
+            grid-column-gap:10px;
+
+        }
+        .calc-text{
+            background-color: transparent;
+            color: white;
+
+            
+        }
+        .calc-text p{
+            width: 100%;
+            height: 60px;
+            text-align: end;
+            border: solid red;
+            word-wrap: break-word;
+            word-break: break-all;
+            font-size: 3.5rem;
+            outline: none;
+        }
+        button{
+            background: #333333;
+            color: #fff;
+            height: 65px;
+            width: 65px;
+            border-radius: 70%;
+            text-transform: capitalize;
+            border: none;
+        }
+        button:active,
+        button:focus{
+            filter: brightness(10%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--main body of the calculator-->
+        <div class="calc-text">
+            <p name='userinput' id='userinput'></p>
+        </div>
+
+        <div class="cal_keys">
+            <button>ac</button>
+            <button>del</button>
+            <button>%</button>
+            <button>/</button>
+            <button>9</button>
+            <button>8</button>
+            <button>7</button>
+            <button>*</button>
+            <button>6</button>
+            <button>5</button>
+            <button>4</button>
+            <button>-</button>
+            <button>3</button>
+            <button>1</button>
+            <button>2</button>
+            <button>+</button>
+            <button>+/-</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+        </div>
+    </div>
+    <script type="button" onclick="document.getElementById('userinput').innerHTML">
+        
+    </script>
+</body>
+</html>

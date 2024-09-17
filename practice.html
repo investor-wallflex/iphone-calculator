@@ -15,7 +15,7 @@
            
         }
         .container{
-            background-color: black;
+            background: url(./images/);
             width: 350px;
             padding: 25px;
             border-radius: 10px;
@@ -27,6 +27,7 @@
             grid-template-columns: repeat(4, 1fr);
             grid-row-gap:15px;
             grid-column-gap:10px;
+            margin-top: 10px;
 
         }
         .calc-text{
@@ -35,7 +36,7 @@
 
             
         }
-        .calc-text p{
+        .calc-text input{
             width: 100%;
             height: 60px;
             text-align: end;
@@ -43,7 +44,9 @@
             word-wrap: break-word;
             word-break: break-all;
             font-size: 3.5rem;
-            outline: none;
+           outline: none;
+            color: black;
+
         }
         button{
             background: #333333;
@@ -58,40 +61,72 @@
         button:focus{
             filter: brightness(10%);
         }
+        .operators{
+            background: orange;
+            font-size: small;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!--main body of the calculator-->
-        <div class="calc-text">
-            <p name='userinput' id='userinput'></p>
+    <div class="container"><!--main body of the calculator-->
+         <div class="calc-text">
+            <input type="text" id="result" >
         </div>
 
         <div class="cal_keys">
-            <button>ac</button>
-            <button>del</button>
-            <button>%</button>
-            <button>/</button>
-            <button>9</button>
-            <button>8</button>
-            <button>7</button>
-            <button>*</button>
-            <button>6</button>
-            <button>5</button>
-            <button>4</button>
-            <button>-</button>
-            <button>3</button>
-            <button>1</button>
-            <button>2</button>
-            <button>+</button>
-            <button>+/-</button>
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
+            <button onclick="clearResult()">ac</button>
+            <button onclick="deleteLastChar()">del</button>
+            <button onclick="appendOperator('%')">%</button>
+            <button class="operators" onclick="appendOperator('/')">/</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button class="operators" onclick="appendOperator('*')">*</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button class="operators" onclick="appendOperator('-')">-</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button class="operators" onclick="appendOperator('+')">+</button>
+            <button onclick="appendOperator('+/-')">+/-</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendDecimal('.')">.</button>
+            <button class="operators" onclick="calculate()">=</button>
         </div>
     </div>
-    <script type="button" onclick="document.getElementById('userinput').innerHTML">
-        
+    <script>
+
+        let result = document.getElementById('result');
+        function appendNumber(number) {
+            result.value += number;
+        }
+
+        function appendOperator(operator) {
+    result.value += operator;
+}
+
+
+function calculate() {
+    try {
+        result.value = eval(result.value);
+    } catch (error) {
+        result.value = "Error"; 
+
+    }
+}
+
+function 
+ clearResult() {
+    result.value = "";
+}
+
+function deleteLastChar() {
+    result.value = result.value.slice(0, -1);
+}
     </script>
+        
+    
 </body>
 </html>

@@ -119,8 +119,99 @@ console.log(stocksTwo)
 //   console.log(j);
 // }
 
-for (let k = 1; k <= 12; k++) {
-    console.log(`2 x ${k} = ${2 * k}`);
-}
+//for (let k = 1; k <= 12; k++) {
+    //console.log(`2 x ${k} = ${2 * k}`);
+//}
 
 // Function
+    
+
+//let a = 1
+
+//if(a%2)=   
+
+
+//let day = 10
+//switch(day){
+   // case 1:
+        
+//}
+
+// how to use a while loop
+let i = 0
+
+/*while (i < 10 ){
+    console.log(i);
+i++
+}*/
+
+//if (i = 10){
+   // console.log(`${i} is the last number`)
+    
+//}
+
+//for (let i = 0; i <10; i++) {
+  // console.log(i)
+    
+        
+//}
+//if (i = 10){
+    //console.log(`${i} is the last number`)}
+
+   // for (let j = 1; j <= 12; j++){
+       // console.log(`2 x ${j} = ${2*j}`)
+   // }
+   
+    // for (let j = 1; j <= 12; j++){
+        console.log(`2 x ${j} = ${2*j}`)
+   // for (let k = 1; j <= 20; j++){
+        console.log(j*k)
+    }
+}  /
+
+=> jeun (){
+    console.log("i smoked garri today")
+}
+
+jeun()
+
+function print (name, address, age){
+    console;else.log(`my name is ${name}, i stay at ${address}, i am ${age}`);
+    
+}
+print("joshua", "sail", 25)
+
+function name (num1, num2){
+    console.log(num1 + num2)
+}
+
+/*function division (num1, num2 num3){
+    total = num1 / num2 / num3
+    return total
+console.log(num1 / num2 / num3)
+}
+division(10000 ,2000, 5000 )
+console.log(total)*/
+
+function multiplication (num1, num2, num3,){
+    total = num1 * num2 * num3
+    return total
+    
+}
+
+//console.log(10000 , 2000 , 5000)
+
+
+/*function squarenumber([num1, num2, num3, num4]){
+    let total =([num1**2, num2**2, num3**2, num4**2])
+    return total
+}*/
+console.log(squarenumber([2,4,6,8]))
+
+
+fetch("http://jsonplaceholder.typicode.com/user").then((response)
+=> response.json()).then(data => console.log(data)
+).catch(error => console.log("an error occured", error)
+)
+
+cobsole.log("i am at the button")
